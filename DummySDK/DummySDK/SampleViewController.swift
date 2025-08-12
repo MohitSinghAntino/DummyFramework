@@ -9,9 +9,9 @@ import Foundation
 import UIKit
 
 public class SampleViewController: UIViewController {
-    @IBOutlet public weak var backButton: UIButton!
-    
-    @IBAction public func backButtonTapped() {
-        self.navigationController?.popViewController(animated: true)
-    }
+//    @IBOutlet public weak var backButton: UIButton!
+//    
+//    @IBAction public func backButtonTapped() {
+//        self.navigationController?.popViewController(animated: true)
+//    }
 }
