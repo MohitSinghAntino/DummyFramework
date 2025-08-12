@@ -8,13 +8,19 @@
 import UIKit
 
 public class FrameworkNavigator {
+    
     public static func makeSampleViewController() -> UIViewController {
+        #if SWIFT_PACKAGE
+        let bundle = Bundle.module
+        #else
         let bundle = Bundle(for: SampleViewController.self)
+        #endif
+        
         let storyboard = UIStoryboard(name: "FrameworkMain", bundle: bundle)
         return storyboard.instantiateViewController(withIdentifier: "SampleViewController")
     }
     
     public static func pop(from navigationController: UINavigationController?, animated: Bool = true) {
-            navigationController?.popViewController(animated: animated)
-        }
+        navigationController?.popViewController(animated: animated)
+    }
 }

@@ -1,10 +1,11 @@
 // swift-tools-version:5.7
+// swift-tools-version:5.7
 import PackageDescription
 
 let package = Package(
     name: "DummySDK",
     platforms: [
-        .iOS(.v12) // Change this to your min iOS version
+        .iOS(.v12) // Change to your minimum iOS version
     ],
     products: [
         .library(
@@ -16,7 +17,11 @@ let package = Package(
         .target(
             name: "DummySDK",
             dependencies: [],
-            path: "DummySDK" // <-- Points to your existing code folder
+            path: "DummySDK", // Folder where your .swift files are
+            resources: [
+                // Include all resources from this folder (XIBs, images, storyboards, JSON, etc.)
+                .process("Resources")
+            ]
         ),
         .testTarget(
             name: "DummySDKTests",
@@ -25,4 +30,3 @@ let package = Package(
         )
     ]
 )
-
