@@ -1,8 +1,8 @@
 //
-//  File.swift
+//  SampleViewController.swift
 //  DummySDK
 //
-//  Created by Mohit Singh on 11/08/25.
+//  Created by Mohit Singh on 12/08/25.
 //
 
 import Foundation
